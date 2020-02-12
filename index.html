@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment: Responsive Gallery</title>
+    <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    margin: 0 auto;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    border-radius: 10px;
+    background-color: #7abaf5; 
+    margin: 15px 0;
+    flex-basis: 17%;
+}
+
+.box img {
+    width: 100%;
+}
+
+.box p {
+    background-color: #f7f9fa;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .box {
+        flex-basis: 20vw;
+    }
+}
+@media screen and (max-width: 768px;) {
+	.box {
+		flex-basis: 33vw;
+	}
+}
+    
+@media screen and (max-width: 414px) {
+    .box {
+        flex-basis: 100vw;
+    }
+}
+    </style>
+</head>
+
+<body>
+	  <h2>Gallery Heading</h2>
+        <div id="container">
+            <div class="box">
+                <img src="placeholder-image.png" alt="image1">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image2">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image3">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image4">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image5">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image6">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image7">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image8">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image9">
+                <p>Image Title</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image.png" alt="image10">
+                <p>Image Title</p>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat sapien vitae tellus cursus elementum. Ut quis ipsum commodo ante finibus tincidunt ac sit amet sem. Suspendisse interdum molestie arcu in gravida. Etiam ullamcorper, nulla eget interdum accumsan, sapien ipsum elementum elit, eu porta diam nisl et dolor. Fusce fringilla blandit nunc nec ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Vivamus vitae risus quam. Pellentesque fringilla erat at pulvinar posuere. Fusce vitae justo cursus nisi vestibulum venenatis. Fusce rhoncus quis libero eget placerat. Ut nisl urna, mollis id fermentum ut, tempor cursus est. Suspendisse elementum, lectus sit amet pulvinar hendrerit, magna arcu varius mauris, ac porttitor diam erat pharetra justo. Praesent commodo nisi ante, in blandit tortor pulvinar eu. Nullam augue mi, accumsan nec dui at, aliquet bibendum orci. Nulla eget mi augue. Donec dictum condimentum libero a sollicitudin. Mauris sem lacus, posuere non lobortis at, gravida non tellus. Nam in aliquam lorem. Vestibulum sit amet mauris faucibus enim egestas hendrerit eu nec lacus. Curabitur in nunc quis orci accumsan fringilla. Donec a neque eu justo vulputate vulputate. Integer volutpat faucibus ipsum et auctor.
+        </p>
+</body>
+</html>
