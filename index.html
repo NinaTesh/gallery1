@@ -1,106 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Assignment: Responsive Gallery</title>
-    <style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 8px;
-    margin: 0 auto;
-}
-
-#container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.box {
-    border-radius: 10px;
-    background-color: #7abaf5; 
-    margin: 15px 0;
-    flex-basis: 17%;
-}
-
-.box img {
-    width: 100%;
-}
-
-.box p {
-    background-color: #f7f9fa;
-    margin: 0;
-    text-align: center;
-    padding: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-@media screen and (max-width: 1024px) {
-    .box {
-        flex-basis: 20vw;
-    }
-}
-@media screen and (max-width: 768px;) {
-	.box {
-		flex-basis: 33vw;
-	}
-}
-    
-@media screen and (max-width: 414px) {
-    .box {
-        flex-basis: 100vw;
-    }
-}
-    </style>
+	<meta charset="UTF-8">
+	<meta name="author" content="Nina Tešić">
+	<title>Responsive Gallery</title>
+	<style>
+		body {
+  		font-family: sans-serif;
+  		font-size: calc(13px + (21 - 13) * ((100vw - 320px) / (1600 - 320)));
+		}
+		.container {
+  		max-width: 960px;
+  		display: grid;
+  		justify-content: center;
+  		margin: 0 auto;
+  		width: 100vw;
+  		grid-template-columns: repeat(5, 1fr);
+  		grid-gap: 30px;
+  		}
+		.box {
+		border-bottom-left-radius: 10px;
+    	border-bottom-right-radius: 10px;
+    	
+    	}
+		.box img {
+			background-color: #4287f5;
+			width: 100%;
+			border: 1px solid white;
+			border-radius: 8px;
+		}
+		.box p {
+			background-color: #f2f3f5;
+    		text-align: center;
+    		border: 2px solid white;
+    		border-radius: 8px;
+    		padding: 8px;
+    		margin: 0;
+    		}
+		@media screen and (max-width: 1024px) {
+			.container {
+				grid-template-columns: repeat(5, 1fr);
+			}
+		}
+		@media screen and (max-width: 768px) {
+			.container {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+		@media screen and (max-width: 414px) {
+			.container {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+		h2 {
+			text-align: center;
+		}
+		.text {
+			max-width: 960px;
+			margin: 0 auto;
+		}
+			</style>
 </head>
-
 <body>
-	  <h2>Gallery Heading</h2>
-        <div id="container">
-            <div class="box">
-                <img src="placeholder-image.png" alt="image1">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image2">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image3">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image4">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image5">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image6">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image7">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image8">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image9">
-                <p>Image Title</p>
-            </div>
-            <div class="box">
-                <img src="placeholder-image.png" alt="image10">
-                <p>Image Title</p>
-            </div>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat sapien vitae tellus cursus elementum. Ut quis ipsum commodo ante finibus tincidunt ac sit amet sem. Suspendisse interdum molestie arcu in gravida. Etiam ullamcorper, nulla eget interdum accumsan, sapien ipsum elementum elit, eu porta diam nisl et dolor. Fusce fringilla blandit nunc nec ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Vivamus vitae risus quam. Pellentesque fringilla erat at pulvinar posuere. Fusce vitae justo cursus nisi vestibulum venenatis. Fusce rhoncus quis libero eget placerat. Ut nisl urna, mollis id fermentum ut, tempor cursus est. Suspendisse elementum, lectus sit amet pulvinar hendrerit, magna arcu varius mauris, ac porttitor diam erat pharetra justo. Praesent commodo nisi ante, in blandit tortor pulvinar eu. Nullam augue mi, accumsan nec dui at, aliquet bibendum orci. Nulla eget mi augue. Donec dictum condimentum libero a sollicitudin. Mauris sem lacus, posuere non lobortis at, gravida non tellus. Nam in aliquam lorem. Vestibulum sit amet mauris faucibus enim egestas hendrerit eu nec lacus. Curabitur in nunc quis orci accumsan fringilla. Donec a neque eu justo vulputate vulputate. Integer volutpat faucibus ipsum et auctor.
-        </p>
+	<h2>Responsivna Galerija</h2>
+	<div class="container">
+		<div class="box">
+			<img src="placeholder-image.png" alt="image1">
+			<p>Slika 1</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image2">
+			<p>Slika 2</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image3">
+			<p>Slika 3</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image4">
+			<p>Slika 4</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image5">
+			<p>Slika 5</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image6">
+			<p>Slika 6</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image7">
+			<p>Slika 7</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image8">
+			<p>Slika 8</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image9">
+			<p>Slika 9</p>
+		</div>
+		<div class="box">
+			<img src="placeholder-image.png" alt="image10">
+			<p>Slika 10</p>
+		</div>
+	</div>
+		<div class="text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat sapien vitae tellus cursus elementum. Ut quis ipsum commodo ante finibus tincidunt ac sit amet sem. Suspendisse interdum molestie arcu in gravida. Etiam ullamcorper, nulla eget interdum accumsan, sapien ipsum elementum elit, eu porta diam nisl et dolor. Fusce fringilla blandit nunc nec ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Vivamus vitae risus quam. Pellentesque fringilla erat at pulvinar posuere. Fusce vitae justo cursus nisi vestibulum venenatis. Fusce rhoncus quis libero eget placerat. Ut nisl urna, mollis id fermentum ut, tempor cursus est. Suspendisse elementum, lectus sit amet pulvinar hendrerit, magna arcu varius mauris, ac porttitor diam erat pharetra justo. Praesent commodo nisi ante, in blandit tortor pulvinar eu. Nullam augue mi, accumsan nec dui at, aliquet bibendum orci. Nulla eget mi augue. Donec dictum condimentum libero a sollicitudin. Mauris sem lacus, posuere non lobortis at, gravida non tellus. Nam in aliquam lorem. Vestibulum sit amet mauris faucibus enim egestas hendrerit eu nec lacus. Curabitur in nunc quis orci accumsan fringilla. Donec a neque eu justo vulputate vulputate. Integer volutpat faucibus ipsum et auctor.</p>
+		</div>	
+
 </body>
 </html>
